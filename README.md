@@ -185,6 +185,41 @@ This assumes:
 screenjson-db -file="./screenplay.json" -engine="sqlite" -uri="sqlite:///path/to/screenplays.db" -table="imports" -field="screenjson" -additional="genre_id=12345,created_at=$(date "+%Y-%m-%d %H:%M:%S"),updated_at=$(date "+%Y-%m-%d %H:%M:%S")"
 ```
 
+## screenjson-decrypt
+
+To build the Docker image:
+
+```bash
+docker build -f docker/screenjson-decrypt/Dockerfile -t screenjson-decrypt:latest .
+docker push screenjson/screenjson-decrypt:latest
+```
+
+## screenjson-encrypt
+
+To build the Docker image:
+
+```bash
+docker build -f docker/screenjson-encrypt/Dockerfile -t screenjson-encrypt:latest .
+docker push screenjson/screenjson-encrypt:latest
+```
+
+## screenjson-export
+
+To build the Docker image:
+
+```bash
+docker build -f docker/screenjson-export/Dockerfile -t screenjson-export:latest .
+docker push screenjson/screenjson-export:latest
+```
+
+## screenjson-import
+
+To build the Docker image:
+
+```bash
+docker build -f docker/screenjson-import/Dockerfile -t screenjson-import:latest .
+docker push screenjson/screenjson-import:latest
+```
 
 ## screenjson-validate
 

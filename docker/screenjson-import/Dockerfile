@@ -6,17 +6,17 @@ WORKDIR /app
 
 # Assuming your Go project already uses modules and you have a go.mod file
 # Copy the local package files to the container's workspace.
-COPY ./src/screenjson-validate .
+COPY ./src/screenjson-import .
 
 # Fetch any external dependencies that might be required.
 RUN go mod download
 
 # Build the command inside the container.
-RUN go build -o /screenjson-validate
+RUN go build -o /screenjson-import
 
 # Use the official Debian slim image for a lean production container.
 FROM debian:buster-slim
-COPY --from=builder /screenjson-validate /screenjson-validate
+COPY --from=builder /screenjson-import /screenjson-import
 
 # Set the binary as the entrypoint of the container
-ENTRYPOINT ["/screenjson-validate"]
+ENTRYPOINT ["/screenjson-import"]
