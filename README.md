@@ -90,7 +90,7 @@ screenjson-db -file="./screenplay.json" -engine="cassandra" -uri="cassandra://us
 docker run screenjson/screenjson-db -file="./screenplay.json" -engine="cassandra" -uri="cassandra://username:password@localhost:9042/screenplays" -database="screenplays" -table="imports" -field="screenjson" -additional="genre_id=12345,created_at=$(date "+%Y-%m-%d %H:%M:%S"),updated_at=$(date "+%Y-%m-%d %H:%M:%S")"
 ```
 
-*Note: if you want to insert the whole JSON file as a single document in this NoSQL database, just omit the <field> and <additional> arguments.*
+*Note: if you want to insert the whole JSON file as a single document in this NoSQL database, just omit the `field` and `additional` arguments.*
 
 #### Insert into Couchbase
 
@@ -108,7 +108,7 @@ screenjson-db -file="./screenplay.json" -engine="couchbase" -uri="couchbase://lo
 docker run screenjson/screenjson-db -file="./screenplay.json" -engine="couchbase" -uri="couchbase://localhost" -database="screenplays" -table="imports" -field="screenjson" -additional="genre_id=12345,created_at=$(date "+%Y-%m-%d %H:%M:%S"),updated_at=$(date "+%Y-%m-%d %H:%M:%S")"
 ```
 
-*Note: if you want to insert the whole JSON file as a single document in this NoSQL database, just omit the <field> and <additional> arguments.*
+*Note: if you want to insert the whole JSON file as a single document in this NoSQL database, just omit the `field` and `additional` arguments.*
 
 #### Insert into CouchDB
 
@@ -122,7 +122,7 @@ This assumes:
 screenjson-db -file="./screenplay.json" -engine="couchdb" -uri="http://username:password@localhost:5984/screenplays" -database="screenplays" -table="imports" -field="screenjson" -additional="genre_id=12345,created_at=$(date "+%Y-%m-%d %H:%M:%S"),updated_at=$(date "+%Y-%m-%d %H:%M:%S")"
 ```
 
-*Note: if you want to insert the whole JSON file as a single document in this NoSQL database, just omit the <field> and <additional> arguments.*
+*Note: if you want to insert the whole JSON file as a single document in this NoSQL database, just omit the `field` and `additional` arguments.*
 
 #### Insert into AWS DynamoDB
 
@@ -150,7 +150,7 @@ This assumes:
 screenjson-db -file="./screenplay.json" -engine="elasticsearch" -uri="http://username:password@localhost:9200/screenplays" -database="screenplays" -table="imports" -field="screenjson" -additional="genre_id=12345,created_at=$(date "+%Y-%m-%d %H:%M:%S"),updated_at=$(date "+%Y-%m-%d %H:%M:%S")"
 ```
 
-*Note: if you want to insert the whole JSON file as a single document in this NoSQL database, just omit the <field> and <additional> arguments.*
+*Note: if you want to insert the whole JSON file as a single document in this NoSQL database, just omit the `field` and `additional` arguments.*
 
 #### Insert into MongoDB
 
@@ -161,7 +161,7 @@ screenjson-db -file="./screenplay.json" -engine="elasticsearch" -uri="http://use
 screenjson-db -file="./screenplay.json" -engine="mongodb" -uri="mongodb://username:password@localhost:27017?authSource=admin" -database="screenplays" -table="imports" -field="screenjson" -additional="custom_key=12345,another_col=something_else"
 ```
 
-*Note: if you want to insert the whole JSON file as a single document in this NoSQL database, just omit the <field> and <additional> arguments.*
+*Note: if you want to insert the whole JSON file as a single document in this NoSQL database, just omit the `field` and `additional` arguments.*
 
 #### Insert into MS SQL Server
 
